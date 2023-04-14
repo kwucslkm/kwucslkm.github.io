@@ -28,7 +28,12 @@
         }
 
         .form-control {
-            border: 2px solid rgb(9, 101, 200);
+            border: 1.2px solid rgb(10, 100, 200);
+            border-radius: 0.08cm;
+        }
+
+        #login_submit {
+            font-size: 20px;
         }
     </style>
 </head>
@@ -41,17 +46,30 @@
         함수 return을 작성하여 함수 호출 결과가 true,false인지에 따라 제출을 제어 할 수 있음 //"return login_check()" -->
     <form action="#" name="loginForm" method="post" onsubmit="return login_check()">
         <div id="login_form" class="container ">
-            <h5>아이디 :</h4> <input type="text" name="memberEmail" id="member-email" class="form-control text-center">
+            <h5>아이디 :</h5> <input type="text" name="memberEmail" id="member-email" class="form-control text-center">
             <h6 id="email-result"></h6>
-            <h5>비밀번호 :</h4><input type="text" name="memberPassword" id="member_password" class="form-control text-center">
-            <span id="m_password"></span><br>
-            <input type="submit" value="login">
-            <span id="chkresult1"></span><br>
+            <h5>비밀번호 :</h5><input type="text" name="memberPassword" id="member_password"
+                class="form-control text-center">
+            <span id="m_password"></span><br><br>
+            <div class="row">
+                <div class="col">
+                    <input type="submit" value="로그인" style="background-color: rgb(32, 152, 32); color:white "
+                        id="login_submit" class="form-control text-center">
+                </div>
+                <div class="col">
+                    <input type="button" value="인덱스가기" style="background-color: rgb(32, 152, 32); color:white "
+                        id="login_submit" class="form-control text-center" onclick="goIndex()">
+                </div>
+                <span id="chkresult1"></span><br>
+            </div>
         </div>
 
     </form>
 </body>
 <script>
+    const goIndex = () => {
+        history.back();
+    }
     const email_chk = () => {
         const email = document.getElementById("member-email").value;
         const resultmsg = document.getElementById("email-result");
