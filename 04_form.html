@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>lkm Shop</title>
     <link rel="stylesheet" href="./CSS/bootstrap.css" />
     <script src="./JS/bootstrap.bundle.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -28,7 +28,7 @@
         }
 
         .form-control {
-            border: 3px solid black;
+            border: 2px solid rgb(9, 101, 200);
         }
     </style>
 </head>
@@ -41,9 +41,9 @@
         함수 return을 작성하여 함수 호출 결과가 true,false인지에 따라 제출을 제어 할 수 있음 //"return login_check()" -->
     <form action="#" name="loginForm" method="post" onsubmit="return login_check()">
         <div id="login_form" class="container ">
-            email : <input type="text" name="memberEmail" id="member-email" class="form-control text-center"><br>
+            <h5>아이디 :</h4> <input type="text" name="memberEmail" id="member-email" class="form-control text-center">
             <h6 id="email-result"></h6>
-            password:<input type="text" name="memberPassword" id="member_password" class="form-control text-center"><br>
+            <h5>비밀번호 :</h4><input type="text" name="memberPassword" id="member_password" class="form-control text-center">
             <span id="m_password"></span><br>
             <input type="submit" value="login">
             <span id="chkresult1"></span><br>

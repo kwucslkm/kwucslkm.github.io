@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lkm Shopping</title>
+    <title>lkm Shop</title>
     <link rel="stylesheet" href="./CSS/bootstrap.css" />
     <script src="./JS/bootstrap.bundle.min.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
@@ -17,16 +17,26 @@
             font-family: 'Poor Story', cursive;
             font-weight: 550;
         }
+
         #save_form {
             width: 500px;
         }
+
         p {
             font-size: 30px;
             color: dodgerblue;
         }
-        .form-control{
-        border: 3px solid skyblue;
-    }
+
+        .form-control {
+            border: 1.5px solid rgb(9, 101, 200);
+            
+            
+        }
+        .form-select {
+            border: 1.5px solid rgb(9, 101, 200);
+            
+        }
+
         /* #gender {
             border: 1px solid;
         } */
@@ -39,12 +49,12 @@
     </div>
     <div id="save_form" class="container">
         <!-- //username 입력(필수) -->
-        <label for="memberUserName">ID :</label>
+        <label for="memberUserName"><strong><h5>아이디 :</strong></label>
         <input type="text" class="form-control" id="memberUserName" onblur="memberId_chk()" name="membrUserName"
             placeholder="id을 입력하세요">
         <h6 id="memberUserName_result"></h6>
         <!-- 비밀번호 입력(필수) -->
-        <label for="memberPassword">Password :</label>
+        <label for="memberPassword"><strong>비밀번호 :</strong></label>
         <input type="text" class="form-control" id="memberPassword" onblur="memberpassword_chk()" name="membrEmail"
             placeholder="password를 입력하세요">
         <h6 id="memberpassword_result"></h6>
@@ -84,7 +94,7 @@
             남: <input type="radio" name="gender" value="male">
             여: <input type="radio" name="gender" value="female">
         </div>
-        <br>
+        <!-- <br> -->
         <!-- <select name="birth_month" id="" class="form-select">
             <option value="male">남</option>
             <option value="female">여</option>
