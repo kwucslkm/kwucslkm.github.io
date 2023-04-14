@@ -1,23 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel = "stylesheet" href = "CSS/index.css">
-    <script src="JS/index.js" defer></script>
+    <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <style>
+    * {
+        font-family: 'Poor Story', cursive;
+        font-weight: 550;
+    }
+
+    body {
+        width: 100vw;
+    }
+    #main_index {
+        width: 300px;
+        /* border: 3px solid black; */
+    }
+    .form-control{
+        border: 3px solid skyblue;
+    }
+</style>
 </head>
+
 <body>
-    <h2>어서오세요~</h2>
-    <a href="06_memberReg.html">회원가입</a>
-    <button onclick = "goLogin()">로그인</button>
-    <button onclick = "fun1()">함수호출</button>
+    <div class="container text-center mt-5">
+        <h1>어서오세요 ~ lkm shop</h1>
+    </div>
+    <div id="main_index" class="container ">
+
+        <a href="06_memberReg.html"class="form-control text-center">회원가입</a><br>
+        <a href="04_form.html"class="form-control text-center">로그인</a><br>
+        
+
+        <!-- <button onclick="goLogin()" class="form-control"> 로그인</button><br> -->
+        <button onclick="fun1()" class="form-control">만든이</button>
+    </div>
 </body>
 <script>
 
     const goLogin = () => {
         location.href = "login.html";
     }
+
 </script>
+
 </html>

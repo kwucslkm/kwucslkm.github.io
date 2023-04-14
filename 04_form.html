@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poor Story', cursive;
+            font-weight: 550;
+        }
+
+        body {
+            width: 100vw;
+        }
+
+        #login_form {
+            width: 300px;
+            /* border: 3px solid black; */
+        }
+
+        .form-control {
+            border: 3px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container text-center mt-5">
+        <h1>lkm shop 로그인</h1>
+    </div>
+    <!-- onsubmit: form에 작성한 정보를 제출(submit) 할 때 호출할 
+        함수 return을 작성하여 함수 호출 결과가 true,false인지에 따라 제출을 제어 할 수 있음 //"return login_check()" -->
+    <form action="#" name="loginForm" method="post" onsubmit="return login_check()">
+        <div id="login_form" class="container ">
+            email : <input type="text" name="memberEmail" id="member-email" class="form-control text-center"><br>
+            <h6 id="email-result"></h6>
+            password:<input type="text" name="memberPassword" id="member_password" class="form-control text-center"><br>
+            <span id="m_password"></span><br>
+            <input type="submit" value="login">
+            <span id="chkresult1"></span><br>
+        </div>
+
+    </form>
+</body>
+<script>
+    const email_chk = () => {
+        const email = document.getElementById("member-email").value;
+        const resultmsg = document.getElementById("email-result");
+        console.log(email);
+        if (email.length < 1) {
+            resultmsg.innerHTML = "필수입력사항입니다. "
+            resultmsg.style.color = "red";
+            return false;
+        } else if (email.length < 5 || email.length >= 20) {
+            resultmsg.innerHTML = "입력가능한 글자수는 5~20자입니다. "
+            resultmsg.style.color = "red";
+            return false;
+        } else {
+            resultmsg.innerHTML = "좋은 아이디 "
+            resultmsg.style.color = "green";
+            return true;
+        }
+    }
+    const password_chk = () => {
+        const password = document.getElementById("member_password").value;
+        const passwordchk = document.getElementById("m_password");
+        console.log(password);
+        if (password.length < 1) {
+            console.log(password.length);
+            passwordchk.innerHTML = "필수입력사항입니다 "
+            passwordchk.style.color = "red";
+            return false;
+        } else if (password.length < 8 || password.length > 16) {
+            passwordchk.innerHTML = "8~16자로 입력해주세요"
+            passwordchk.style.color = "red";
+            return false;
+
+        } else {
+            passwordchk.innerHTML = "좋아요"
+            passwordchk.style.color = "green";
+            return true;
+        }
+    }
+    const login_check = () => {
+        //email, password중에 하나라도 입력되지 않았으면 submit을 하지 않고
+        //입력하지 않은 항목에 focus를 줌
+        const email = document.getElementById("member-email");
+        const password = document.getElementById("member_password");
+        if (!email_chk()) {
+            //email 입력에 focus
+            email.focus();
+            return false;
+        } else if (!password_chk()) {
+            password.focus();
+            return false;
+        } else {
+            return true;
+        }
+
+    }
+</script>
+
+</html>
