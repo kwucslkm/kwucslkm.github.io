@@ -14,40 +14,89 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
-    <style>
-    * {
-        font-family: 'Poor Story', cursive;
-        font-weight: 550;
-    }
-
-    body {
-        width: 100vw;
-    }
-    #main_index {
-        width: 300px;
-        /* border: 1px solid rgb(9, 101, 200); */
-    }
-    .form-control{
-        border:1.8px solid rgb(10, 100, 200);
-        border-radius: 0.1cm;
-    }
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
     
-</style>
+    
+    
+    <style>
+        * {
+            /* font-family: 'Dongle', sans-serif; */
+            font-family: 'KimjungchulGothic-Bold';
+            font-weight: 200;
+        }
+        @font-face {
+            font-family: 'KimjungchulGothic-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+        }
+        
+
+        /* body:before {
+            content: ' '; */
+        /* background-image: linear-gradient(to bottom, black, transparent); */
+        /* linear-gradient( rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3) ) */
+        /* position: absolute; */
+        /* top: 0; */
+        /* height: 150%;
+            width: 100%;
+        } */
+
+        #main_index {
+            width: 300px;
+            border: 1px solid rgb(215, 214, 214);
+            border-radius: 0.07cm;
+            padding: 10PX;
+            padding-bottom: 20PX;
+            background-color: rgb(241, 236, 236);
+        }
+
+        #main_index a, #btn_made {
+            background-color: rgb(135, 108, 108);
+            /*rgb(54, 167, 105)*/
+            color: white;
+            margin-bottom: 5px;
+            font-size: 16px;
+        }
+
+        .form-control {
+            /* border: 1.8px solid rgb(10, 100, 200); */
+            border-radius: 0.1cm;
+        }
+
+        #login_title {
+            font-size: 20px;
+            color: grey;
+            text-align: left;
+            padding-left: 15px;
+            padding-bottom: 5px;
+        }
+
+        /* #btn_made {
+            background-color: rgb(231, 71, 97);
+            color: white;
+        } */
+    </style>
 </head>
 
 <body>
-    <div class="container text-center mt-5">
-        <h2><strong>어서오세요 ~ lkm shop</strong></h2><br>
-    </div>
-    <div id="main_index" class="container ">
+    <div id="loginFrame" class="container" class="form-control text-center">
+        <div id="main_index" class="container text-center mt-5">
+            <div id="login_title">
+                어서오세요 ~ lkm shop
+            </div>
+            <div id="index_button" class="container ">
 
-        <a href="06_memberReg.html"class="form-control text-center"><strong>회원가입</strong></a><br>
-        <a href="04_form.html"class="form-control text-center"><strong>로그인</strong></a><br>
-        
+                <a href="06_memberReg.html" class="form-control text-center">회원가입</a>
+                <a href="04_form.html" class="form-control text-center">로그인</a>
 
-        <!-- <button onclick="goLogin()" class="form-control"> 로그인</button><br> -->
-        <button onclick="fun1()" class="form-control"><strong>만든이</strong></button>
+
+                <!-- <button onclick="goLogin()" class="form-control"> 로그인</button><br> -->
+                <button onclick="fun1()" class="form-control" id="btn_made">만든이</button>
+            </div>
+        </div>
     </div>
+
 </body>
 <script>
 

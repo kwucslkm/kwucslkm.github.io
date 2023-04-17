@@ -7,15 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lkm Shop</title>
     <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <link rel="stylesheet" href="./CSS/index.css" />
     <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/index.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
     <style>
         * {
-            font-family: 'Poor Story', cursive;
-            font-weight: 550;
+            font-family: 'KimjungchulGothic-Bold';
+            font-weight: 500;
+        }
+        @font-face {
+            font-family: 'KimjungchulGothic-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
         }
 
         body {
@@ -24,6 +33,9 @@
 
         #login_form {
             width: 300px;
+            border: 1px solid white;
+            border-radius: 0.1cm;
+            background-color: rgb(244, 243, 243);
             /* border: 3px solid black; */
         }
 
@@ -35,30 +47,72 @@
         #login_submit {
             font-size: 20px;
         }
+
+        
+        #logtitle {
+            color: black;
+            font-size: 25px;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+        }
+
+        
+        #m_password,#email-result{
+            font-size: 20px;
+        }
+        #member-email,#member_password {
+
+        }
+        
+        .container2 {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 2px;
+        }
+        .item {
+            /* background-color: aqua; */
+        }
+
+        .item1 {
+            /* margin-right: 0px; */
+            /* grid-column-start: 1/4;
+            grid-column-end: 2; */
+        }
+
+        .item2 {
+            
+            /* grid-column: 2;
+            grid-row-start: 1; */
+            
+        }
+      
     </style>
 </head>
 
 <body>
-    <div class="container text-center mt-5">
-        <h1>lkm shop 로그인</h1>
-    </div>
+
     <!-- onsubmit: form에 작성한 정보를 제출(submit) 할 때 호출할 
         함수 return을 작성하여 함수 호출 결과가 true,false인지에 따라 제출을 제어 할 수 있음 //"return login_check()" -->
     <form action="#" name="loginForm" method="post" onsubmit="return login_check()">
-        <div id="login_form" class="container ">
-            <h5>아이디 :</h5> <input type="text" name="memberEmail" id="member-email" class="form-control text-center">
+        <div id="login_form" class="container">
+            <div class="container text-center mt-4 mb-3">
+                <span id="logtitle">lkm shop 로그인</span>
+            </div>
+            <span>아이디 :</span> 
+            <input type="text" name="memberEmail" id="member-email" class="form-control text-center">
             <h6 id="email-result"></h6>
-            <h5>비밀번호 :</h5><input type="text" name="memberPassword" id="member_password"
+            <span>비밀번호 :</span>
+            <input type="text" name="memberPassword" id="member_password"
                 class="form-control text-center">
-            <span id="m_password"></span><br><br>
-            <div class="row">
-                <div class="col">
-                    <input type="submit" value="로그인" style="background-color: rgb(32, 152, 32); color:white "
-                        id="login_submit" class="form-control text-center">
+            <span id="m_password"></span><br>
+            <div class=container2>
+                <div class="item item1">
+                    <input type="submit" value="   로그인   "
+                        id ="login_submit" class="btn btn-outline-success">
                 </div>
-                <div class="col">
-                    <input type="button" value="인덱스가기" style="background-color: rgb(32, 152, 32); color:white "
-                        id="login_submit" class="form-control text-center" onclick="goIndex()">
+                <div class=" item item2">
+                    <input type="button" value="인덱스가기" 
+                        id="login_index" class="btn btn-outline-success" onclick="goIndex()">
                 </div>
                 <span id="chkresult1"></span><br>
             </div>

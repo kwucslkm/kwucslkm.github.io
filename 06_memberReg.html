@@ -7,141 +7,239 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>lkm Shop</title>
     <link rel="stylesheet" href="./CSS/bootstrap.css" />
+    <link rel="stylesheet" href="./CSS/index.css" />
     <script src="./JS/bootstrap.bundle.min.js"></script>
+    <script src="./JS/index.js"></script>
     <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poor+Story&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
     <style>
         * {
-            font-family: 'Poor Story', cursive;
-            font-weight: 550;
+            /* font-family: 'Poor Story', cursive; */
+            /* font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif; */
+            font-family: 'KimjungchulGothic-Bold';
+            font-weight: 400;
+        }
+
+        @font-face {
+            font-family: 'KimjungchulGothic-Bold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
         }
 
         #save_form {
-            width: 500px;
+            width: 400px;
+            font-size: 1px;
+            font-weight: 600;
+            padding: none;
         }
 
         p {
-            font-size: 30px;
-            color: dodgerblue;
+            font-size: 40px;
+            color: rgb(26, 116, 207);
+            font-weight: 600;
         }
 
         .form-control {
             border: 1.2px solid rgb(10, 100, 200);
             border-radius: 0.08cm;
-            
-            
+            margin-bottom: 3px;
+
         }
+
         .form-select {
             border: 1.2px solid rgb(10, 100, 200);
             border-radius: 0.08cm;
         }
 
-        /* #gender {
-            border: 1px solid;
+        .lable_class {
+            font-weight: 600;
+        }
+
+        .at-symbol {
+            margin-left: -20px;
+            margin-right: -20px;
+        }
+
+        .at-symbol span {
+            display: inline-block;
+            padding: 3px 0;
+            vertical-align: middle;
+            font-size: 18px;
+        }
+
+        #reg_member {
+            top: 100px;
+            border: 1px solid grey;
+            background-color: rgba(250, 246, 246, 255);
+            border-radius: 0.1cm;
+            width: 420px;
+            margin-top: 30px;
+
+        }
+
+        #memberEmail_do {
+            margin-bottom: 5px;
+        }
+
+        #reg_button {
+            margin-bottom: 20px;
+        }
+
+
+        label {
+            font-size: 15px;
+        }
+
+        .container1 {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 1px;
+        }
+        
+        /* .item1 {
+            margin-right: 0px; 
+             grid-column-start: 1;
+            grid-column-end: 2;
+        }
+
+        .item2 {
+            margin-left: 0px;
+            grid-column: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
         } */
+         
     </style>
 </head>
 
 <body>
-    <div class="container text-center mt-5">
-        <p>lkm shop 회원가입</p>
-    </div>
-    <div id="save_form" class="container">
-        <!-- //username 입력(필수) -->
-        <label for="memberUserName"><strong><h5>아이디 :</strong></label>
-        <input type="text" class="form-control" id="memberUserName" onblur="memberId_chk()" name="membrUserName"
-            placeholder="id을 입력하세요">
-        <h6 id="memberUserName_result"></h6>
-        <!-- 비밀번호 입력(필수) -->
-        <label for="memberPassword"><strong>비밀번호 :</strong></label>
-        <input type="text" class="form-control" id="memberPassword" onblur="memberpassword_chk()" name="membrEmail"
-            placeholder="password를 입력하세요">
-        <h6 id="memberpassword_result"></h6>
-        <!-- 비밀번호 입력 확인(필수) -->
-        <label for="password_confirm">비밀번호 재확인</label>
-        <input type="password_confirm" id="password_confirm" onblur="memberpassword_rchk()" name="password_confirm"
-            class="form-control">
-        <h6 id="password_confirmr"></h6>
-        <label for="member_name">이름</label>
-        <input type="name" id="member_name" onblur="membername_chk()" name="name" class="form-control">
-        <h6 id="manme_result"></h6>
-        <!-- 5. 전화번호(memberMobile)
+    <div class=" container" id="reg_member">
+        <div class="container text-center mt-4">
+            <p>회원가입</p>
+        </div>
+        <div id="save_form" class="container">
+            <!-- //username 입력(필수) -->
+            <label for="memberUserName" class="lable_class">아이디 :</label>
+            <input type="text" class="form-control" id="memberUserName" onblur="memberId_chk()" name="membrUserName"
+                placeholder="id을 입력하세요">
+            <h6 id="memberUserName_result"></h6>
+            <!-- 비밀번호 입력(필수) -->
+            <label for="memberPassword" class="lable_class">비밀번호 :</label>
+            <input type="text" class="form-control" id="memberPassword" onblur="memberpassword_chk()" name="membrEmail"
+                placeholder="password를 입력하세요">
+            <h6 id="memberpassword_result"></h6>
+            <!-- 비밀번호 입력 확인(필수) -->
+            <label for="password_confirm" class="lable_class">비밀번호 재확인</label>
+            <input type="password_confirm" id="password_confirm" onblur="memberpassword_rchk()" name="password_confirm"
+                class="form-control">
+            <h6 id="password_confirmr"></h6>
+            <label for="member_name" class="lable_class">이름</label>
+            <input type="name" id="member_name" onblur="membername_chk()" name="name" class="form-control">
+            <h6 id="manme_result"></h6>
+            <!-- 5. 전화번호(memberMobile)
             1. 통신사를 선택하는 select 있음. 
                 1. SKT, KT, LG, MVNO 선택할 수 있음. 
             2. 전화번호는 010-0000-0000으로 입력하도록 함. 만족하지 않으면 빨간색으로 형식에 맞지 않는다고 출력  -->
-        <label for="memberMobile_com">휴대전화</label>
-        <div class="row">
-            <div class="col-4 ">
-                <select name="memberMobileCom" id="memberMobile_com" class="form-select">
-                    <option value="1">SKT</option>
-                    <option value="2">KT</option>
-                    <option value="3">LG</option>
-                    <option value="4">MVNO</option>
-                </select>
+            <label for="memberMobile_com" class="lable_class">휴대전화</label>
+            <div class="container1">
+                <div class="item1">
+                    <select name="memberMobileCom" id="memberMobile_com" class="form-select">
+                        <option value="1">SKT</option>
+                        <option value="2">KT</option>
+                        <option value="3">LG</option>
+                        <option value="4">MVNO</option>
+                    </select>
+                </div>
+                <div class="item2">
+                    <input type="tel" id="memberMoblie1" onblur="memberMoblie1_chk()" name="memberMobile1"
+                        class="form-control" placeholder="010-0000-0000">
+                </div>
             </div>
-            <div class="col-8 ">
-                <input type="tel" id="memberMoblie1" onblur="memberMoblie1_chk()" name="memberMobile1"
-                    class="form-control" placeholder="010-0000-0000">
-            </div>
-        </div>
-        <h6 id="memberMobile_result"></h6>
-        <!-- 7. 성별(memberGender) 1. radio를 이용하여 남, 녀 선택 -->
+            <!-- <div class="row">
+                <div class="col-4 mr-0">
+                    <select name="memberMobileCom" id="memberMobile_com" class="form-select">
+                        <option value="1">SKT</option>
+                        <option value="2">KT</option>
+                        <option value="3">LG</option>
+                        <option value="4">MVNO</option>
+                    </select>
+                </div>
+                <div class="col-8 ml-0" >
+                    <input type="tel" id="memberMoblie1" onblur="memberMoblie1_chk()" name="memberMobile1"
+                        class="form-control" placeholder="010-0000-0000">
+                </div>
+            </div> -->
+            <h6 id="memberMobile_result"></h6>
+            <!-- 7. 성별(memberGender) 1. radio를 이용하여 남, 녀 선택 -->
 
-        <label for="gender">성별</label>
-        <div id="gender" class="form-control">
-            선택안함  <input type="radio" name="gender" value="nmale">
-            남 : <input type="radio" name="gender" value="male">
-            여 : <input type="radio" name="gender" value="female">
-        </div>
-        <!-- <br> -->
-        <!-- <select name="birth_month" id="" class="form-select">
+            <label for="gender" class="lable_class">성별</label>
+            <div id="gender" class="form-control">
+                선택안함 <input type="radio" name="gender" value="nmale">
+                남 : <input type="radio" name="gender" value="male">
+                여 : <input type="radio" name="gender" value="female">
+            </div>
+            <!-- <br> -->
+            <!-- <select name="birth_month" id="" class="form-select">
             <option value="male">남</option>
             <option value="female">여</option>
             <option value="no">선택안함</option>
         </select> -->
-        <!-- //  6. 이메일(memberEmail)
+            <!-- //  6. 이메일(memberEmail)
 //             1. 계정을 쓰고 도메인은 select로 선택 
 //             2. select 항목은 직접입력, 네이버, 다음, 지메일  -->
-        <label for="memberEmail">Email</label>
-        <div class="row">
-            <div class="col">
-                <input type="text" id="memberEmail" onblur="memberEmail_chk()" name="memberEmail" class="form-control"
-                    placeholder="계정 입력">
+            <label for="memberEmail" class="lable_class">Email</label>
+            <div class="row">
+                <div class="col">
+                    <input type="text" id="memberEmail" onblur="memberEmail_chk()" name="memberEmail"
+                        class="form-control" placeholder="계정 입력">
+                </div>
+                <div class="col-auto pl-0 pr-0 at-symbol">
+                    <span>@</span>
+                </div>
+                <div class="col">
+                    <input type="text" id="memEmail_domain" name="emailDomain" class="form-control">
+                </div>
+                <div class="col">
+                    <select name="memberEmaildo" id="memberEmail_do" class="form-select" onchange="domain_select()">
+                        <option value="">직접입력</option>
+                        <option value="naver.com">네이버</option>
+                        <option value="gmail.com">지메일</option>
+                        <option value="hanmail.net">한메일</option>
+                    </select>
+                </div>
             </div>
-            @
-            <div class="col">
-                <input type="text" id="memEmail_domain" name="emailDomain" class="form-control">
+            <h6 id="memberEmail_result"></h6>
+
+            <!-- 주소를 입력하는 부분 api -->
+            <label for="sample6_postcode" class="lable_class">주소</label>
+            <div class="row">
+                <div class="col-auto">
+                    <input type="text" id="sample6_postcode" placeholder="우편번호" class="form-control">
+                </div>
+                <div class="col-auto">
+                    <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="form-control">
+                </div>
             </div>
-            <div class="col">
-                <select name="memberEmaildo" id="memberEmail_do" class="form-select" onchange="domain_select()">
-                    <option value="">직접입력</option>
-                    <option value="naver.com">네이버</option>
-                    <option value="gmail.com">지메일</option>
-                    <option value="hanmail.net">한메일</option>
-                </select>
-            </div>
-        </div>
-        <h6 id="memberEmail_result"></h6>
-        <br>
-        <!-- 주소를 입력하는 부분 api -->
-        <input type="text" id="sample6_postcode" placeholder="우편번호" class="form-control">
-        <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기" class="form-control"><br>
-        <input type="text" id="sample6_address" placeholder="주소" class="form-control"><br>
-        <input type="text" id="sample6_detailAddress" placeholder="상세주소" class="form-control">
-        <input type="text" id="sample6_extraAddress" placeholder="참고항목" class="form-control"><br>
-        <div class="row">
-            <div class="col d-grid">
-                <input type="submit" class="btn btn-outline-success" value="가입하기" onclick="goIndex()" >
-                
+            <input type="text" id="sample6_address" placeholder="주소" class="form-control">
+            <input type="text" id="sample6_detailAddress" placeholder="상세주소" class="form-control">
+            <input type="text" id="sample6_extraAddress" placeholder="참고항목" class="form-control">
+            <div class="row">
+                <div class="col d-grid">
+                    <input type="submit" id="reg_button" class="btn btn-outline-success" value="가입하기"
+                        onclick="goIndex()">
+
+                </div>
             </div>
         </div>
     </div>
     </div>
 </body>
 <script>
-     const goIndex = () => {
+    const goIndex = () => {
         history.back();
     }
     const domain_select = () => {
@@ -262,12 +360,12 @@
         if (memberUserName.value.length == 0) {
             resultmsg.innerHTML = " 필수입력사항입니다."
             resultmsg.style.color = "red";
-            memberUserName.focus();
+            // memberUserName.focus();
         } else if (!memberUserName.value.match(exp)) {
             console.log("f call suc..")
             resultmsg.innerHTML = " 5~10자리 숫자,영문소문자포함(필수)특수문자(- , _)만 입력가능합니다."
             resultmsg.style.color = "red";
-            memberUserName.focus();
+            // memberUserName.focus();
         } else {
             resultmsg.innerHTML = " 좋아요"
             resultmsg.style.color = "green";
