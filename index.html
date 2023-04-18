@@ -61,56 +61,32 @@
             padding-left: 15px;
             padding-bottom: 5px;
         }
+        #main_index{
+            /* border: solid red 1px; */
+            /* margin-top :  30px; */
+        }
 
-        #acod {
-            font-size: 30px;
-            
-            width: 600px;
-            margin: auto;
-            background-color: rgb(98, 204, 216);
+        #loginFrame {
+            /* border: solid yellow 1px; */
+            padding: 30px;
         }
     </style>
 </head>
 
 <body>
-    <div id="loginFrame" class="container" class="form-control text-center">
-        <div id="main_index" class="container text-center mt-5">
+    <div id="loginFrame" class="container">
+        <div id="main_index" class="container" >
             <div id="login_title">
                 어서오세요 ~ lkm shop
             </div>
-            <div id="index_button" class="container ">
-
+            <div id="index_button">
                 <a href="06_memberReg.html" class="form-control text-center">회원가입</a>
                 <a href="04_form.html" class="form-control text-center">로그인</a>
-
-
-                <!-- <button onclick="goLogin()" class="form-control"> 로그인</button><br> -->
-                <!-- <button onclick="fun1()" class="form-control" id="btn_made">만든이</button> -->
-                <button onclick="gojcgi()" class="form-control" id="btn_made">정처기 실기 공부</button>
+                <button onclick="gojcgi()" class="form-control" id="btn_made">정처기 실기</button>
             </div>
         </div>
     </div>
-    <!-- <div id="acod" class="form-control text-center">
-        <details >
-            <summary>아코디언실습중</summary>
-            <p></p>
-        </details>
 
-        <details  >
-            <summary>Accordion 2</summary>
-            <ul>
-                <li>…</li>
-                <li>…</li>
-            </ul>
-        </details>
-    </div> -->
 </body>
-<script>
-
-    const goLogin = () => {
-        location.href = "login.html";
-    }
-
-</script>
 
 </html>

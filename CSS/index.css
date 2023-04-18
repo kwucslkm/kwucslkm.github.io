@@ -2,10 +2,12 @@ a{
     text-decoration: none;
 }
 body {
-    /* width: 100vw; */
+    
     height: 100vh;
-    /* background: url(./imgs/programming-coding-language-wallpaper-2560x1080_14.jpg); */
+    
     background-image: linear-gradient(rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.3)),
         url(../imgs/programming-coding-language-wallpaper-2560x1080_14.jpg);
 
 }
+/* width: 100vw; */
+/* background: url(./imgs/programming-coding-language-wallpaper-2560x1080_14.jpg); */
