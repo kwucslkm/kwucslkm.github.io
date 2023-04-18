@@ -20,6 +20,7 @@
             font-family: 'KimjungchulGothic-Bold';
             font-weight: 500;
         }
+
         @font-face {
             font-family: 'KimjungchulGothic-Bold';
             src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/KimjungchulGothic-Bold.woff2') format('woff2');
@@ -36,56 +37,28 @@
             border: 1px solid white;
             border-radius: 0.1cm;
             background-color: rgb(244, 243, 243);
-            /* border: 3px solid black; */
-        }
-
-        .form-control {
-            border: 1.2px solid rgb(10, 100, 200);
-            border-radius: 0.08cm;
-        }
-
-        #login_submit {
-            font-size: 20px;
-        }
-
-        
-        #logtitle {
-            color: black;
-            font-size: 25px;
-            padding-bottom: 5px;
-            margin-bottom: 10px;
-        }
-
-        
-        #m_password,#email-result{
-            font-size: 20px;
-        }
-        #member-email,#member_password {
 
         }
-        
-        .container2 {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 2px;
-        }
-        .item {
-            /* background-color: aqua; */
-        }
-
-        .item1 {
-            /* margin-right: 0px; */
-            /* grid-column-start: 1/4;
-            grid-column-end: 2; */
+     
+        #login_submit,
+        #login_index {
+            font-size: 16px;
+            width: 110px;
+            background-color: #19ce60;
+            color: white;
         }
 
-        .item2 {
-            
-            /* grid-column: 2;
-            grid-row-start: 1; */
-            
+        #member-email,
+        #member_password {
+            width: 230px;
+
+            margin: 0 auto;
+
         }
-      
+        .msg{
+            font-size:13px;
+            margin-bottom: 3px;
+        }
     </style>
 </head>
 
@@ -98,32 +71,32 @@
             <div class="container text-center mt-4 mb-3">
                 <span id="logtitle">lkm shop 로그인</span>
             </div>
-            <span>아이디 :</span> 
-            <input type="text" name="memberEmail" id="member-email" class="form-control text-center">
-            <h6 id="email-result"></h6>
-            <span>비밀번호 :</span>
-            <input type="text" name="memberPassword" id="member_password"
-                class="form-control text-center">
-            <span id="m_password"></span><br>
-            <div class=container2>
-                <div class="item item1">
-                    <input type="submit" value="   로그인   "
-                        id ="login_submit" class="btn btn-outline-success">
+            <div id="login_frame" class="form-control">
+                <span>아이디 :</span>
+
+                <input type="text" name="memberEmail" id="member-email" class="form-control text-center">
+
+                <span id="email-result"class="msg"></span><br>
+                <span>비밀번호 :</span>
+                <input type="text" name="memberPassword" id="member_password" class="form-control text-center">
+                <span id="m_password" class="msg"></span><br>
+                <div class=row>
+                    <div class="col">
+                        <input type="submit" value=" 로그인 " id="login_submit" class="btn btn-outline-success">
+                    </div>
+                    <div class="col">
+                        <input type="button" value="회원가입" id="login_index" class="btn btn-outline-success"
+                            onclick="goMemreg()">
+                    </div>
+                    <span id="chkresult1"></span><br>
                 </div>
-                <div class=" item item2">
-                    <input type="button" value="인덱스가기" 
-                        id="login_index" class="btn btn-outline-success" onclick="goIndex()">
-                </div>
-                <span id="chkresult1"></span><br>
             </div>
         </div>
 
     </form>
 </body>
 <script>
-    const goIndex = () => {
-        history.back();
-    }
+    
     const email_chk = () => {
         const email = document.getElementById("member-email").value;
         const resultmsg = document.getElementById("email-result");
