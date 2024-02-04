@@ -19,7 +19,7 @@ locale                   : "ko-KR"
 title                    : "개발자로"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "개발자로"
+name                     : "lkm"
 description              : "Forever"
 url                      : "https://kwucslkm.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
