@@ -3,7 +3,7 @@ main:
   - title: "블로그 방문하기"
     url: https://kwucslkm.github.io/
   - title: "posts"
-    url: /_posts/
+    url: https://kwucslkm.github.io/
   # - title: "Quick-Start Guide"
     # url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
