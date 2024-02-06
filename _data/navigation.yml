@@ -1,9 +1,9 @@
 # main links
 main:
   - title: "블로그 방문하기"
-  url: https://kwucslkm.github.io/
+    url: https://kwucslkm.github.io/
   - title: "posts"
-  url: /_posts/
+    url: /_posts/
   # - title: "Quick-Start Guide"
     # url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
   # - title: "About"
