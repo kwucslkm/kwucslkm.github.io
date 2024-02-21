@@ -2,6 +2,7 @@
 title:  "callback 함수"
 categories:
   - Blog
+excerpt : "블루님 글 중..."
 tags:
   - Blog
 ---
