@@ -291,3 +291,6 @@ defaults:
       comments: # true
       share: true
       related: true
+
+require 'time'
+current_time = Time.now.iso8601
