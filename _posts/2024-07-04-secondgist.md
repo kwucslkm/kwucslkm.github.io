@@ -4,7 +4,7 @@ categories:
   - Blog
 tags:
   - Blog
-last_modified_at: 2024-07-04T12:34:56-07:00
+last_modified_at: {{ "now" | date: "%Y-%m-%d %H:%M:%S %z" }}
 ---
 
 ## 재시작 테스트
