@@ -1,9 +1,12 @@
 ---
-title:  "Dependency Injection"
+title: "Dependency Injection in Java"
 categories:
-  - Blog
+  - Programming
+  - Java
 tags:
-  - Blog
+  - Dependency Injection
+  - Spring Framework
+  - Software Design
 last_modified_at: {{ "now" | date: "%Y-%m-%d %H:%M:%S %z" }}
 ---
 
