@@ -14,7 +14,7 @@ tags:
 ## Dependency Injection, DI
     1. 생성자 주입 (Constructor Injection):
         - 가장 권장되는 방법입니다.
-        - 불변성을 보장하고 순환 참조를 방지할 수 있습니다.
+        - 불변성을 보장하고 순환 참조를 방지할 수 있습니다.   
 ```java   
         @Controller
         public class UserController {
@@ -27,7 +27,7 @@ tags:
         }
 ```
     2.필드 주입 (Field Injection):
-        - 간단하지만 테스트하기 어렵고 순환 참조 문제가 발생할 수 있어 권장되지 않습니다.
+        - 간단하지만 테스트하기 어렵고 순환 참조 문제가 발생할 수 있어 권장되지 않습니다.   
 ```java   
         @Controller
         public class UserController {
@@ -37,7 +37,7 @@ tags:
 ```
     3. 세터 주입 (Setter Injection):
 
-        - 선택적 의존성에 유용하지만, 불변성을 보장하지 않습니다.
+        - 선택적 의존성에 유용하지만, 불변성을 보장하지 않습니다.   
 ```java   
         @Controller
         public class UserController {
@@ -50,7 +50,7 @@ tags:
         }
 ```
     4. 메서드 주입 (Method Injection):
-        - 거의 사용되지 않지만, 특수한 경우에 유용할 수 있습니다.
+        - 거의 사용되지 않지만, 특수한 경우에 유용할 수 있습니다.   
 ```java   
         @Controller
         public class UserController {
@@ -64,7 +64,7 @@ tags:
 ```
     5. 인터페이스를 통한 주입:
         - 느슨한 결합을 위해 인터페이스를 사용할 수 있습니다.
-        - 여기서 UserService는 인터페이스이고, 실제 구현체는 Spring이 주입합니다.
+        - 여기서 UserService는 인터페이스이고, 실제 구현체는 Spring이 주입합니다.    
 ```java   
         @Controller
         public class UserController {
@@ -77,7 +77,7 @@ tags:
         }
 ```
     6. 생성자 주입 시 @Autowired 생략:
-        - Spring 4.3 이후부터는 단일 생성자의 경우 @Autowired를 생략할 수 있습니다.
+        - Spring 4.3 이후부터는 단일 생성자의 경우 @Autowired를 생략할 수 있습니다.   
 ```java   
         @Controller
         public class UserController {
