@@ -4,7 +4,7 @@ categories:
   - Blog
 tags:
   - Blog
-last_modified_at: {{ "now" | date: "%Y-%m-%d %H:%M:%S %z" }}
+last_modified_at: "{{ 'now' | date: '%Y-%m-%d %H:%M:%S %z' }}"
 ---
 
 ## 재시작 테스트

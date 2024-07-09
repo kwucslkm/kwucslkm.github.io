@@ -7,7 +7,8 @@ tags:
   - Dependency Injection
   - Spring Framework
   - Software Design
-last_modified_at: 2024-07-09T10:20:00-08:00
+  last_modified_at: "{{ 'now' | date: '%Y-%m-%d %H:%M:%S %z' }}"
+# last_modified_at: 2024-07-09T10:20:00-08:00
 
 ---
 
