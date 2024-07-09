@@ -291,7 +291,4 @@ defaults:
       comments: # true
       share: true
       related: true
-# current_time: "{{ 'now' | date: '%Y-%m-%dT%H:%M:%S%z' }}"
-
-require 'time'
-current_time = Time.now.iso8601
+current_time: "{{ 'now' | date: '%Y-%m-%dT%H:%M:%S%z' }}"
